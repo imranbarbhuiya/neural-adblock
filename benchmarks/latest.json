@@ -1,0 +1,8 @@
+{
+  "iterations": 100000,
+  "elapsedMs": 725.2071249999999,
+  "requestsPerSecond": 137891.64026759943,
+  "microsecondsPerRequest": 7.252071249999998,
+  "runtime": "Bun 1.4.1",
+  "platform": "darwin-arm64"
+}

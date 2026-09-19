@@ -1,0 +1,2 @@
+import { classifyRequest } from "../src/index"; import { generate } from "./data";
+const examples = generate(1200, 0xdecafbad); let correct = 0; for (const example of examples) if (classifyRequest(example.request).category === example.category) correct++; const metrics = { corpus: "1,200 deterministic synthetic held-out requests", seed: "0xdecafbad", accuracy: correct / examples.length, requests: examples.length, classes: 3 }; console.log(JSON.stringify(metrics, null, 2)); if (metrics.accuracy < 0.97) throw new Error(`accuracy ${metrics.accuracy} is below 0.97`);
