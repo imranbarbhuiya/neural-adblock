@@ -1,18 +1,36 @@
 {
   "name": "neural-adblock",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A tiny local fallback classifier for ad and tracker requests.",
   "author": "Parbez <imranbarbhuiya.fsd@gmail.com>",
   "homepage": "https://github.com/imranbarbhuiya/neural-adblock#readme",
-  "repository": { "type": "git", "url": "git+https://github.com/imranbarbhuiya/neural-adblock.git" },
-  "bugs": { "url": "https://github.com/imranbarbhuiya/neural-adblock/issues" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imranbarbhuiya/neural-adblock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imranbarbhuiya/neural-adblock/issues"
+  },
   "type": "module",
-  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
-  "bin": { "neural-adblock": "dist/cli.js" },
-  "files": ["dist", "MODEL_CARD.md", "LICENSE"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "neural-adblock": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "MODEL_CARD.md",
+    "LICENSE"
+  ],
   "sideEffects": false,
   "license": "MIT",
-  "publishConfig": { "access": "public" },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "bun run scripts/build.ts",
     "test": "bun test",
@@ -23,5 +41,13 @@
     "check": "bun test && bun run evaluate && bun run build && bun run privacy",
     "prepack": "bun run check"
   },
-  "keywords": ["adblock", "privacy", "tracker", "machine-learning", "browser", "local-first", "typescript"]
+  "keywords": [
+    "adblock",
+    "privacy",
+    "tracker",
+    "machine-learning",
+    "browser",
+    "local-first",
+    "typescript"
+  ]
 }
